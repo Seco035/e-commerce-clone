@@ -13,4 +13,14 @@ i{
 
 a{
     text-decoration: none;
+    color: black;
+}
+a:hover{
+    color: grey;
+}
+
+li{
+    list-style: none;
+    margin-left: 20px;
+    margin-top: 10px;
 }
