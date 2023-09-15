@@ -24,3 +24,12 @@ li{
     margin-left: 20px;
     margin-top: 10px;
 }
+
+nav{
+    /* border: 2px solid red; */
+    margin-bottom: 10px;
+}
+
+input{
+    width: 200px;
+}
