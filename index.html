@@ -1,195 +1,227 @@
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-Commerce-Clone</title>
-    <!-- Bootstrap İcon CDN -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-Commerce-Clone</title>
+  <!-- Bootstrap İcon CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
 
-    <!-- Bootstrap CSS CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <!-- Bootstrap CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
-    <!-- External CSS --> 
-    <link rel="stylesheet" href="style.css">
-    
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css">
+
 </head>
+
 <body>
-    <!-- HEADER -->
+  <!-- HEADER -->
 
+  <div class="container-fluid">
+    <div class="row gri">
+      <div class="col-12 py-1 d-flex justify-content-between px-5">
+        <div class="contacts">
+          <a href="#">
+            <i class="bi bi-telephone-fill text-black">+2 95 01 88 281</i>
+          </a>
+          <a href="#" class="ps-5 ms-3">
+            <i class="bi bi-envelope-fill text-black"> info@domain.com</i>
+          </a>
+        </div>
+
+        <div class="socialMedia me-5">
+          <a href="#"><i class="bi bi-facebook text-black me-3"></i></a>
+          <a href="#"><i class="bi bi-twitter text-black me-3"></i></a>
+          <a href="#"><i class="bi bi-linkedin text-black me-3"></i></a>
+          <a href="#"><i class="bi bi-github text-black"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HEADER LOGO KISMI -->
+  <div class="row mt-3">
+    <div class="col-12 px-5 d-flex justify-content-between">
+      <div class="logo-usa-dollar d-flex mb-3">
+        <a href="index.html"><img src="img/logo.PNG" alt=""></a>
+        <select name="usa" class="my-2 ms-3">
+          <option value="">USA</option>
+        </select>
+        <select name="dollar" class="my-2 ms-3">
+          <option value="">DOLLAR</option>
+        </select>
+      </div>
+      <div class="menu">
+        <ul class="d-flex px-5">
+          <li>
+            <a href="#">
+              <i class="bi bi-person-fill">User</i>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="bi bi-star-fill">Whistlist</i>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="bi bi-bullseye">Checkout</i>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="bi bi-cart4">Cart</i>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="bi bi-lock-fill">Login</i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- HEADER NAVBAR KISMI -->
+  <nav class="navbar navbar-expand-lg border-top">
     <div class="container-fluid">
-        <div class="row gri">
-            <div class="col-12 py-1 d-flex justify-content-between px-5">
-                <div class="contacts">
-                    <a href="#">
-                        <i class="bi bi-telephone-fill text-black">+2 95 01 88 281</i>
-                    </a>
-                    <a href="#" class="ps-5 ms-3">
-                        <i class="bi bi-envelope-fill text-black"> info@domain.com</i>
-                    </a>    
-                </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active text-warning" aria-current="page" href="#">Home</a>
+          </li>
 
-                <div class="socialMedia me-5">
-                    <a href="#"><i class="bi bi-facebook text-black me-3"></i></a>
-                    <a href="#"><i class="bi bi-twitter text-black me-3"></i></a>
-                    <a href="#"><i class="bi bi-linkedin text-black me-3"></i></a>
-                    <a href="#"><i class="bi bi-github text-black"></i></a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- HEADER LOGO KISMI -->
-    <div class="row mt-3">
-        <div class="col-12 px-5 d-flex justify-content-between">
-            <div class="logo-usa-dollar d-flex mb-3">
-                <a href="index.html"><img src="img/logo.PNG" alt=""></a>
-                <select name="usa" class="my-2 ms-3"><option value="">USA</option></select>
-                <select name="dollar" class="my-2 ms-3"><option value="">DOLLAR</option></select>
-            </div>
-            <div class="menu">
-                <ul class="d-flex px-5">
-                    <li>
-                        <a href="#">
-                            <i class="bi bi-person-fill">User</i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="bi bi-star-fill">Whistlist</i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="bi bi-bullseye">Checkout</i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="bi bi-cart4">Cart</i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="bi bi-lock-fill">Login</i>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <!-- HEADER NAVBAR KISMI -->
-    <nav class="navbar navbar-expand-lg border-top">
-        <div class="container-fluid">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active text-warning" aria-current="page" href="#">Home</a>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Shop
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li>
+                <hr class="dropdown-divider">
               </li>
-              
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Shop
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Blog
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">404</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Contact</a>
-              </li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
             </ul>
-            <div class="input-group w-25 px-5">
-                <input type="text" class="form-control shadow-none " placeholder="Search"
-                    aria-label="Recipient's username" aria-describedby="button-addon2">
-                <button class="btn bg-warning" type="button" id="button-addon2">
-                    <i class="bi bi-search text-black"></i>  
-                </button>
-            </div>
-            </form>
-          </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Blog
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">404</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+        <div class="input-group w-25 px-5">
+          <input type="text" class="form-control shadow-none " placeholder="Search" aria-label="Recipient's username"
+            aria-describedby="button-addon2">
+          <button class="btn bg-warning" type="button" id="button-addon2">
+            <i class="bi bi-search text-black"></i>
+          </button>
         </div>
-      </nav>
-    </header>
-    
-    <main>
-      <aside>
-        <h2 class="px-5 pt-3 text-warning">CATEGORY</h2>
-        <div class="row">
-          <div class="col-12 px-5">
-            <div class="row">
-              <div class="col-3">
-                <aside>
-                  <div class="accordion" id="accordionExample">
-                    <div class="accordion-item">
-                      <h2 class="accordion-header">
-                        <button class="accordion-button border-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                          Accordion Item #1
-                        </button>
-                      </h2>
-                      <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                          <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                        </div>
-                      </div>
-                    </div>
-                    <div class="accordion-item">
-                      <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                          Accordion Item #2
-                        </button>
-                      </h2>
-                      <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                          <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                        </div>
-                      </div>
-                    </div>
-                    <div class="accordion-item">
-                      <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                          Accordion Item #3
-                        </button>
-                      </h2>
-                      <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                          <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                        </div>
-                      </div>
+        </form>
+      </div>
+    </div>
+  </nav>
+  </header>
+
+  <main>
+    <aside>
+      <h2 class="ms-5 px-5 ps-5 pt-3 fs-4 text-warning">CATEGORY</h2>
+      <div class="row">
+        <div class="col-12 px-5">
+          <div class="row">
+            <div class="col-3">
+              <aside>
+                <div class="accordion accordion-flush w-75" id="accordionFlushExample">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                        SPORTSWEAR
+                      </button>
+                    </h2>
+                    <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
                     </div>
                   </div>
-                </aside>
-              </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                        MENS
+                      </button>
+                    </h2>
+                    <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                        WOMEN
+                      </button>
+                    </h2>
+                    <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+                    </div>
+                  </div>
+                  <ul class="pi-0">
+                    <li>
+                      <a href="#">KIDS</a>
+                    </li>
+                    <li>
+                      <a href="#">FASHIONS</a>
+                    </li>
+                    <li>
+                      <a href="#">HOUSEHOLDS</a>
+                    </li>
+                    <li>
+                      <a href="#">INTERIORS</a>
+                    </li>
+                    <li>
+                      <a href="#">CLOTHING</a>
+                    </li>
+                    <li>
+                      <a href="#">BAGS</a>
+                    </li>
+                    <li>
+                      <a href="#">SHOES</a>
+                    </li>
+                  </ul>
+                </div>
+              </aside>
             </div>
           </div>
         </div>
-      </aside>
-        
-    </main>
+      </div>
+    </aside>
 
-    <!-- Bootstrap JS CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    
-    <!-- External JS -->
-    <script src="script.js"></script>
+  </main>
+
+  <!-- Bootstrap JS CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+
+  <!-- External JS -->
+  <script src="script.js"></script>
 </body>
+
 </html>

@@ -34,5 +34,9 @@ nav{
 }
 
 .accordion{
-    border: 1px solid rgb(222, 222, 222);
+    border: 1px solid rgb(189, 188, 188);
+}
+
+.pi-0{
+    padding-inline: 0px;
 }
