@@ -7,6 +7,10 @@
     background-color: rgb(196, 194, 194);
     height: 5vh;
 }
+.features{
+    position: relative;
+    left: 38%;
+}
 i{
     font-size: 17px;
 }
@@ -34,7 +38,7 @@ nav{
 }
 
 .accordion{
-    border: 1px solid rgb(189, 188, 188);
+    border: 2px solid gray;
 }
 
 .pi-0{
