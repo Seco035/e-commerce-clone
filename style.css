@@ -23,10 +23,21 @@ a:hover{
     color: grey;
 }
 
+#addBtn:hover{
+    width: 112px;
+    border: 2px black solid;
+}
+
 li{
     list-style: none;
     margin-left: 20px;
     margin-top: 10px;
+}
+
+.card{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 nav{
@@ -47,4 +58,12 @@ nav{
 
 .ps-6{
     padding-left: 20%;
+}
+
+.footer-bg{
+    background-color: #F0F0E9;
+}
+
+.fs-7 {
+    font-size: 12px;
 }

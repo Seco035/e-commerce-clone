@@ -17,8 +17,8 @@ document.addEventListener("DOMContentLoaded", function(){
 const row = document.querySelector(".rowW");
 function ekranaYazdir(resim){
     row.innerHTML += `
-         <div class="col-3 my-3">
-                     <div class="card h-100 d-flex align-items-center pt-5 text-center">
+         <div class="col-4 my-3">
+                     <div class="card h-100 d-flex align-items-center text-center">
                      <img src=${resim.image} alt=""  height="250px" width="250px" class="card-img-top p-4" alt="">
                      <div class="card-body">
                          <h5 class="card-title">${resim.title}</h5>
@@ -40,3 +40,24 @@ function ekle(e){
         cart.innerHTML++;
     }
 }
+
+
+// const searchBtn = document.querySelector(".searchBtn");
+// const searchInput = document.querySelector(".searchInput");
+
+// searchBtn.addEventListener("click", aramaYap)
+// function aramaYap(){
+//     let searchText = searchInput.value.toLowerCase();
+//     searchInput.value = ""
+
+//     let cards = document.querySelectorAll(".col-3");
+
+//     cards.forEach(function(card){
+//         let title = card.querySelector(".card-title");
+//         if(title.innerHTML.toLowerCase().includes(searchText)){
+//             card.style.display = "block"
+//         }else{
+//             card.style.display = "none"
+//         }
+//     })
+// }
