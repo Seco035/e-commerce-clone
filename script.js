@@ -41,7 +41,7 @@ function ekle(e){
     }
 }
 
-// İnput ile ürün filtreleme
+// Ürün filtreleme
 
 const searchBtn = document.querySelector(".searchBtn");
 const searchInput = document.querySelector(".searchInput");
