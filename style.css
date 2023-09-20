@@ -60,10 +60,20 @@ nav{
     padding-left: 20%;
 }
 
-.footer-bg{
+.footer-bg-1{
     background-color: #F0F0E9;
 }
 
-.fs-7 {
+.footer-bg-2{
+    background-color: rgba(128, 128, 128, 0.24);
+}
+
+.fs-7{
     font-size: 12px;
+}
+
+.square{
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
 }

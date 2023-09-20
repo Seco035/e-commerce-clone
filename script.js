@@ -41,23 +41,25 @@ function ekle(e){
     }
 }
 
+// İnput ile ürün filtreleme
 
-// const searchBtn = document.querySelector(".searchBtn");
-// const searchInput = document.querySelector(".searchInput");
+const searchBtn = document.querySelector(".searchBtn");
+const searchInput = document.querySelector(".searchInput");
 
-// searchBtn.addEventListener("click", aramaYap)
-// function aramaYap(){
-//     let searchText = searchInput.value.toLowerCase();
-//     searchInput.value = ""
+searchBtn.addEventListener("click", filtrele);
 
-//     let cards = document.querySelectorAll(".col-3");
+function filtrele() {
+    let searchText = searchInput.value.toLowerCase();
 
-//     cards.forEach(function(card){
-//         let title = card.querySelector(".card-title");
-//         if(title.innerHTML.toLowerCase().includes(searchText)){
-//             card.style.display = "block"
-//         }else{
-//             card.style.display = "none"
-//         }
-//     })
-// }
+    const cards = document.querySelectorAll(".col-4");
+    for (let i = 0; i < cards.length; i++) {
+        const card = cards[i];
+        const productName = card.querySelector(".card-title").innerHTML.toLowerCase();
+
+        if (productName.includes(searchText)) {
+            card.style.display = "block";
+        } else {
+            card.style.display = "none";
+        }
+    }
+}
