@@ -77,3 +77,11 @@ nav{
     height: 40px;
     cursor: pointer;
 }
+
+.circle{
+    width: 100px;
+    height: 100px;
+}
+.borderr{
+    border: 2px solid red;
+}
