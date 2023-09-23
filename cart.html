@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CART</title>
+    <title>Cart</title>
 
     <!-- Bootstrap İcon CDN -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
@@ -73,7 +73,7 @@
                             </a>
                         </li>
                         <li>
-                            <span class="cart-box text-success">0</span>
+                            <h5 class="cart-box d-inline-block text-success">0</h5>
                             <a href="cart.html">
                                 <i class="bi bi-cart4">Cart</i>
                             </a>
@@ -150,6 +150,29 @@
             </div>
         </nav>
     </header>
+    <!-- MAIN -->
+    <main class="container">
+        <div class="row bg-warning p-2 text-white">
+            <div class="col-4">
+                <h4>Item</h4>
+            </div>
+            <div class="col-2">
+                <h4>Price</h4>
+            </div>
+            <div class="col-3">
+                <h4>Quantity</h4>
+            </div>
+            <div class="col-3">
+                <h4>Total</h4>
+            </div>
+        </div>
+
+        <div class="row cartRow">
+            
+        </div>
+
+    </main>
+<img src="">
     <footer class="w-100 footer-bg-1 mt-5 pt-5">
         <!-- FOOTER 1. Satır -->
 
@@ -171,6 +194,7 @@
                 </div>
             </div>
         </div>
+
 
 
         <!-- FOOTER 2. Satır -->
@@ -284,7 +308,7 @@
         crossorigin="anonymous"></script>
 
     <!-- External JS -->
-    <script src="script.js"></script>
+    <script src="cart.js"></script>
 </body>
 
 </html>

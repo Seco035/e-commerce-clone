@@ -1,19 +1,19 @@
-const url = "https://fakestoreapi.com/products";
-// API'den gelen verileriri yakalıyoruz.
+let url = "https://fakestoreapi.com/products";
+
 document.addEventListener("DOMContentLoaded", function(){
     fetch(url)
     .then(function(response){
         return response.json()
     })
     .then(function(data){
-        console.log(data);
-        data.forEach(function(resim){
-            ekranaYazdir(resim)
-        });   
+        console.log(data)
+        data.forEach(function(photo){
+            ekranaYazdir(photo)
+        })
     })
 })
 
-// ekranaYazdir(resim) fonksiyonunu tanimliyoruz.
+// ekranaYazdir(photo) fonksiyonunu tanimliyoruz.
 const row = document.querySelector(".rowW");
 function ekranaYazdir(photo){
     row.innerHTML += `
@@ -30,14 +30,62 @@ function ekranaYazdir(photo){
          `
 }
 
-// sepete ekleye bastığımızda sepetin içindeki ürün sayısını arttıran kodlar.
+
+// // sepete ekleye bastığımızda sepetin içindeki ürün sayısını arttıran kodlar.
+// row.addEventListener("click", ekle)
+// function ekle(e){
+//     if(e.target.id.includes("addBtn")){
+//         const parentDiv = e.target.parentElement.parentElement
+//         console.log(parentDiv);
+//         const cart = document.querySelector(".cart-box")
+//         cart.innerHTML++;
+//     }
+// }
+
+// Ürünleri saklamak için bir dizi oluşturun.
+let cartItems = [];
+
+// Sepete eklemeyi dinlemek için addBtn elementini kullanabilirsiniz.
 row.addEventListener("click", ekle)
+
 function ekle(e){
     if(e.target.id.includes("addBtn")){
-        const parentDiv = e.target.parentElement.parentElement
-        console.log(parentDiv);
-        const cart = document.querySelector(".cart-box")
-        cart.innerHTML++;
+        // Tıklanan ürünü bulun.
+        const parentDiv = e.target.parentElement.parentElement;
+        const productName = parentDiv.querySelector(".card-title").innerHTML;
+
+        if (cartItems.some(item=>item.name == productName)) {
+            // Ürün sepette zaten varsa kullanıcıya bir uyarı verin.
+            const alert = document.querySelector(".alert")
+            alert.classList.remove("d-none");
+            alert.classList.add("d-block");
+            setTimeout(function(){
+                alert.classList.remove("d-block");
+                alert.classList.add("d-none");
+                
+            },3500)
+        } else {
+            const productPrice = parentDiv.querySelector(".card-title.fs-3").innerHTML;
+            const productImage = parentDiv.querySelector(".card-img-top").getAttribute("src");
+
+            // Ürünü bir nesne olarak temsil edin.
+            const product = {
+                name: productName,
+                price: productPrice,
+                image: productImage
+            };
+
+            // Ürünü sepete ekleyin.
+            cartItems.push(product);
+
+            // Sepet içeriğini local storage'e kaydedin.
+            localStorage.setItem("cart", JSON.stringify(cartItems));
+            
+            // Sepet sayısını güncelleyin.
+            const cart = document.querySelector(".cart-box")
+            cart.innerHTML++;
+
+        }
     }
 }
 
