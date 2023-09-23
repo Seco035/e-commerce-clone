@@ -30,31 +30,18 @@ function ekranaYazdir(photo){
          `
 }
 
+let cartUrunleri = [];
 
-// // sepete ekleye bastığımızda sepetin içindeki ürün sayısını arttıran kodlar.
-// row.addEventListener("click", ekle)
-// function ekle(e){
-//     if(e.target.id.includes("addBtn")){
-//         const parentDiv = e.target.parentElement.parentElement
-//         console.log(parentDiv);
-//         const cart = document.querySelector(".cart-box")
-//         cart.innerHTML++;
-//     }
-// }
-
-// Ürünleri saklamak için bir dizi oluşturun.
-let cartItems = [];
-
-// Sepete eklemeyi dinlemek için addBtn elementini kullanabilirsiniz.
+// Sepete eklenen elementi bulma
 row.addEventListener("click", ekle)
 
 function ekle(e){
     if(e.target.id.includes("addBtn")){
-        // Tıklanan ürünü bulun.
+
         const parentDiv = e.target.parentElement.parentElement;
         const productName = parentDiv.querySelector(".card-title").innerHTML;
 
-        if (cartItems.some(item=>item.name == productName)) {
+        if (cartUrunleri.some(item=>item.name == productName)) {
             // Ürün sepette zaten varsa kullanıcıya bir uyarı verin.
             const alert = document.querySelector(".alert")
             alert.classList.remove("d-none");
@@ -68,18 +55,14 @@ function ekle(e){
             const productPrice = parentDiv.querySelector(".card-title.fs-3").innerHTML;
             const productImage = parentDiv.querySelector(".card-img-top").getAttribute("src");
 
-            // Ürünü bir nesne olarak temsil edin.
             const product = {
                 name: productName,
                 price: productPrice,
                 image: productImage
             };
+            cartUrunleri.push(product);
 
-            // Ürünü sepete ekleyin.
-            cartItems.push(product);
-
-            // Sepet içeriğini local storage'e kaydedin.
-            localStorage.setItem("cart", JSON.stringify(cartItems));
+            localStorage.setItem("cart", JSON.stringify(cartUrunleri));
             
             // Sepet sayısını güncelleyin.
             const cart = document.querySelector(".cart-box")

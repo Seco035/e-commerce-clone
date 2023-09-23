@@ -29,4 +29,30 @@ if(sepettekiUrunler&& sepettekiUrunler.length>0){
         `
     })
 
+// i etiketi içindeki X butonuna basınca ürün silme
+const removeButtons = document.querySelectorAll(".cartRow i");
+
+removeButtons.forEach((removeButton, index) => {
+    removeButton.addEventListener("click", () => {
+        cartRow.remove(cartRow.parentElement.parentElement);
+
+        sepettekiUrunler.splice(index, 1);
+        localStorage.setItem("cart", JSON.stringify(sepettekiUrunler));
+        window.location.reload();
+    });
+});
+
+
+
+ // Butonları ve p etiketlerini seçin
+const plusButtons = document.querySelectorAll(".cartRow button:nth-child(1)");
+const minusButtons = document.querySelectorAll(".cartRow button:nth-child(3)");
+const quantityElements = document.querySelectorAll(".cartRow .tane");
+const productPriceElements = document.querySelectorAll(".cartRow .productPrice");
+
+// Sepetteki ürün adeti
+const cart = document.querySelector(".cart-box")
+const totalItemsInCart = sepettekiUrunler.length;
+cart.innerHTML = totalItemsInCart;
+
 }
