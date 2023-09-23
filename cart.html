@@ -22,7 +22,7 @@
     <header>
         <div class="container-fluid">
             <div class="row gri">
-                <div class="col-12 py-1 d-flex justify-content-between align-items-center px-5">
+                <div class="col-sm-12 py-1 d-flex justify-content-between align-items-center px-5">
                     <div class="contacts">
                         <a href="#">
                             <i class="bi bi-telephone-fill text-black">+2 95 01 88 281</i>
@@ -44,8 +44,8 @@
 
         <!-- HEADER LOGO KISMI -->
 
-        <div class="row mt-3">
-            <div class="col-12 px-5 d-flex justify-content-between">
+        <div class="row mt-3 headerLogo">
+            <div class="col-md-12 px-5 d-flex justify-content-between">
                 <div class="logo-usa-dollar d-flex mb-3">
                     <a href="index.html"><img src="img/logo.PNG" alt=""></a>
                     <select name="usa" class="my-2 ms-3">
@@ -57,7 +57,7 @@
                 </div>
                 <div class="menu">
                     <ul class="d-flex px-5">
-                        <li>
+                        <li class="user">
                             <a href="#">
                                 <i class="bi bi-person-fill">User</i>
                             </a>
@@ -90,7 +90,7 @@
 
         <!-- HEADER NAVBAR KISMI -->
 
-        <nav class="navbar navbar-expand-lg border-top">
+        <nav class="navbar navbar-expand-md border-top">
             <div class="container-fluid">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -98,6 +98,23 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="d-md-none px-5">
+                        <li>
+                            <a href="cart.html">
+                                <i class="bi bi-cart4">Cart</i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="login.html">
+                                <i class="bi bi-lock-fill">Login</i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="whistlist.html">
+                                <i class="bi bi-star-fill">Whistlist</i>
+                            </a>
+                        </li>
+                    </ul>
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
                             <a class="nav-link active text-warning" aria-current="page" href="index.html">Home</a>
@@ -150,6 +167,7 @@
             </div>
         </nav>
     </header>
+
     <!-- MAIN -->
     <main class="container">
         <div class="row bg-warning p-2 text-white">
@@ -190,11 +208,15 @@
                 <div class="row">
                     <div class="col-4 px-4">
                         <h6>Country</h6>
-                        <select><option value="">United States</option></select>
+                        <select>
+                            <option value="">United States</option>
+                        </select>
                     </div>
                     <div class="col-4">
                         <h6>Region/State</h6>
-                        <select><option>Select</option></select>
+                        <select>
+                            <option>Select</option>
+                        </select>
                     </div>
                     <div class="col-4">
                         <h6>ZIP Code</h6>
@@ -202,7 +224,7 @@
                     </div>
                 </div>
                 <div class="buttons my-3">
-                    <button class="btn bg-warning text-white mx-4 rounded-0">Get Quotes</button>
+                    <button class="btn bg-warning cartBtn text-white mx-4 rounded-0">Get Quotes</button>
                     <button class="btn bg-warning text-white rounded-0">Continue</button>
                 </div>
             </div>
@@ -220,7 +242,7 @@
                     <h6 class="px-2">Total</h6>
                 </div>
                 <div class="buttons my-3">
-                    <button class="btn bg-warning text-white mx-4 rounded-0">Update</button>
+                    <button class="btn cartBtn bg-warning text-white mx-4 rounded-0">Update</button>
                     <button class="btn bg-warning text-white rounded-0">Check Out</button>
                 </div>
             </div>
@@ -232,14 +254,14 @@
 
         <div class="container">
             <div class="row border-bottom ms-5 my-4">
-                <div class="col-3">
+                <div class="col-md-3">
                     <h2 class="fs-5 mt-2"><span class="text-warning">E</span>-SHOPPER</h2>
                     <p class="fs-7">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque vitae modi aut,
                         totam esse
                         tempore.</p>
                 </div>
 
-                <div class="col-8 ms-2">
+                <div class="col-md-8 ms-2">
                     <img src="img/footer-photo1.PNG" alt="">
                     <img src="img/footer-photo2.PNG" alt="">
                     <img src="img/footer-photo3.PNG" alt="">
@@ -255,7 +277,7 @@
 
         <div class="container">
             <div class="row">
-                <div class="col-9 d-flex justify-content-between">
+                <div class="col-md-9 d-flex justify-content-between">
                     <ul class="mt-3">
                         <h5 class="ms-4">SERVICE</h5>
                         <li>
@@ -329,7 +351,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="col-2 ms-5 text-center">
+                <div class="col-md-2 ms-5 text-center">
                     <h5>ABOUT SHOPPER</h5>
                     <div class="input-group mb-3">
                         <input type="text" class="form-control shadow-none" placeholder="Your email adress"

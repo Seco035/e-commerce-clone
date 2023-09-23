@@ -1,23 +1,23 @@
 let url = "https://fakestoreapi.com/products";
 
-document.addEventListener("DOMContentLoaded", function(){
+document.addEventListener("DOMContentLoaded", function () {
     fetch(url)
-    .then(function(response){
-        return response.json()
-    })
-    .then(function(data){
-        console.log(data)
-        data.forEach(function(photo){
-            ekranaYazdir(photo)
+        .then(function (response) {
+            return response.json()
         })
-    })
+        .then(function (data) {
+            console.log(data)
+            data.forEach(function (photo) {
+                ekranaYazdir(photo)
+            })
+        })
 })
 
 // ekranaYazdir(photo) fonksiyonunu tanimliyoruz.
 const row = document.querySelector(".rowW");
-function ekranaYazdir(photo){
+function ekranaYazdir(photo) {
     row.innerHTML += `
-         <div class="col-4 my-3">
+         <div class="col-md-4 urunCard my-3">
                      <div class="card h-100 d-flex align-items-center text-center">
                      <img src=${photo.image} alt=""  height="250px" width="250px" class="card-img-top p-4" alt="">
                      <div class="card-body">
@@ -35,22 +35,22 @@ let cartUrunleri = [];
 // Sepete eklenen elementi bulma
 row.addEventListener("click", ekle)
 
-function ekle(e){
-    if(e.target.id.includes("addBtn")){
+function ekle(e) {
+    if (e.target.id.includes("addBtn")) {
 
         const parentDiv = e.target.parentElement.parentElement;
         const productName = parentDiv.querySelector(".card-title").innerHTML;
 
-        if (cartUrunleri.some(item=>item.name == productName)) {
+        if (cartUrunleri.some(item => item.name == productName)) {
             // Ürün sepette zaten varsa kullanıcıya bir uyarı verin.
             const alert = document.querySelector(".alert")
             alert.classList.remove("d-none");
             alert.classList.add("d-block");
-            setTimeout(function(){
+            setTimeout(function () {
                 alert.classList.remove("d-block");
                 alert.classList.add("d-none");
-                
-            },3500)
+
+            }, 3500)
         } else {
             const productPrice = parentDiv.querySelector(".card-title.fs-3").innerHTML;
             const productImage = parentDiv.querySelector(".card-img-top").getAttribute("src");
@@ -63,7 +63,7 @@ function ekle(e){
             cartUrunleri.push(product);
 
             localStorage.setItem("cart", JSON.stringify(cartUrunleri));
-            
+
             // Sepet sayısını güncelleyin.
             const cart = document.querySelector(".cart-box")
             cart.innerHTML++;

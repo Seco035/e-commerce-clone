@@ -17,12 +17,11 @@
 </head>
 
 <body>
-
     <!-- HEADER -->
     <header>
         <div class="container-fluid">
             <div class="row gri">
-                <div class="col-12 py-1 d-flex justify-content-between align-items-center px-5">
+                <div class="col-sm-12 py-1 d-flex justify-content-between align-items-center px-5">
                     <div class="contacts">
                         <a href="#">
                             <i class="bi bi-telephone-fill text-black">+2 95 01 88 281</i>
@@ -44,8 +43,8 @@
 
         <!-- HEADER LOGO KISMI -->
 
-        <div class="row mt-3">
-            <div class="col-12 px-5 d-flex justify-content-between">
+        <div class="row mt-3 headerLogo">
+            <div class="col-md-12 px-5 d-flex justify-content-between">
                 <div class="logo-usa-dollar d-flex mb-3">
                     <a href="index.html"><img src="img/logo.PNG" alt=""></a>
                     <select name="usa" class="my-2 ms-3">
@@ -57,7 +56,7 @@
                 </div>
                 <div class="menu">
                     <ul class="d-flex px-5">
-                        <li>
+                        <li class="user">
                             <a href="#">
                                 <i class="bi bi-person-fill">User</i>
                             </a>
@@ -90,7 +89,7 @@
 
         <!-- HEADER NAVBAR KISMI -->
 
-        <nav class="navbar navbar-expand-lg border-top">
+        <nav class="navbar navbar-expand-md border-top">
             <div class="container-fluid">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -98,6 +97,23 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="d-md-none px-5">
+                        <li>
+                            <a href="cart.html">
+                                <i class="bi bi-cart4">Cart</i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="login.html">
+                                <i class="bi bi-lock-fill">Login</i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="whistlist.html">
+                                <i class="bi bi-star-fill">Whistlist</i>
+                            </a>
+                        </li>
+                    </ul>
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
                             <a class="nav-link active text-warning" aria-current="page" href="index.html">Home</a>
@@ -135,7 +151,7 @@
                             <a class="nav-link" href="#">404</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Contact</a>
+                            <a class="nav-link" href="contact.html">Contact</a>
                         </li>
                     </ul>
                     <div class="input-group w-25 px-5">
@@ -150,19 +166,23 @@
             </div>
         </nav>
     </header>
+
     <!-- CONTENT -->
     <main class="container-78">
         <div class="row">
-            <div class="col-8">
-                <input class="w-48 me-2 h40 my-3" type="text" placeholder="Name">
-                <input class="w-48 h40 ms-3" type="text" placeholder="Email">
+            <div class="col-md-8">
+                <div class="yanyana">
+                    <input class="w-48 me-2 h40 my-3" type="text" placeholder="Name">
+                    <input class="w-48 h40 ms-3" type="text" placeholder="Email">
+                </div>
+
                 <input class="w-100 h40 mb-3" type="text" placeholder="Subject">
-                <textarea class="br-5 border-2" placeholder="Your message here..." cols="104" rows="7"></textarea>
+                <textarea class="br-5 border-2" placeholder="Your message here..." cols="132" rows="7"></textarea>
                 <div class=" d-flex justify-content-end mt-4">
                     <button class="bg-warning rounded-0 border-0 text-white buton">Submit</button>
                 </div>
             </div>
-            <div class="col-3 ms-3 mt-4">
+            <div class="col-md-3 ms-3 mt-4">
                 <h5 class="text-center text-warning mb-4">CONTACT INFO</h5>
                 <p>E-shopper Inc.
                     <br>
@@ -193,14 +213,14 @@
 
         <div class="container">
             <div class="row border-bottom ms-5 my-4">
-                <div class="col-3">
+                <div class="col-md-3">
                     <h2 class="fs-5 mt-2"><span class="text-warning">E</span>-SHOPPER</h2>
                     <p class="fs-7">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque vitae modi aut,
                         totam esse
                         tempore.</p>
                 </div>
 
-                <div class="col-8 ms-2">
+                <div class="col-md-8 ms-2">
                     <img src="img/footer-photo1.PNG" alt="">
                     <img src="img/footer-photo2.PNG" alt="">
                     <img src="img/footer-photo3.PNG" alt="">
@@ -211,11 +231,12 @@
         </div>
 
 
+
         <!-- FOOTER 2. Satır -->
 
         <div class="container">
             <div class="row">
-                <div class="col-9 d-flex justify-content-between">
+                <div class="col-md-9 d-flex justify-content-between">
                     <ul class="mt-3">
                         <h5 class="ms-4">SERVICE</h5>
                         <li>
@@ -289,7 +310,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="col-2 ms-5 text-center">
+                <div class="col-md-2 ms-5 text-center">
                     <h5>ABOUT SHOPPER</h5>
                     <div class="input-group mb-3">
                         <input type="text" class="form-control shadow-none" placeholder="Your email adress"
