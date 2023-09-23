@@ -42,8 +42,6 @@ removeButtons.forEach((removeButton, index) => {
     });
 });
 
-
-
  // Butonları ve p etiketlerini seçin
 const artıButton = document.querySelectorAll(".cartRow button:nth-child(1)");
 const eksiButton = document.querySelectorAll(".cartRow button:nth-child(3)");
@@ -53,23 +51,36 @@ const productPrice = document.querySelectorAll(".cartRow .productPrice");
 // + butonu işlemleri
 artıButton.forEach((plusButton, index) => {
     plusButton.addEventListener("click", () => {
-        // Mevcut miktarı alın
         let currentQuantity = parseInt(quantity[index].textContent);
     
-        // Miktarı artıButtonrın
         currentQuantity++;
     
-        // Yeni miktarı tane classlı div içine yazın
         quantity[index].textContent = currentQuantity;
     
-        // Ürün fiyatını alın
         let currentProductPrice = parseFloat(sepettekiUrunler[index].price);
     
-        // Yeni toplam fiyatı hesaplayın
         let newTotalPrice = currentQuantity * currentProductPrice;
     
-        // Yeni toplam fiyatı productPrice div'ine yazın
         productPrice[index].textContent = newTotalPrice.toFixed(2);
+    });
+});
+
+// - butonu işlemleri
+eksiButton.forEach((minusButton, index) => {
+    minusButton.addEventListener("click", () => {
+        let currentQuantity = parseInt(quantity[index].textContent);
+    
+        if (currentQuantity > 1) {
+            currentQuantity--;
+    
+            quantity[index].textContent = currentQuantity;
+    
+            let currentProductPrice = parseFloat(sepettekiUrunler[index].price);
+    
+            let newTotalPrice = currentQuantity * currentProductPrice;
+    
+            productPrice[index].textContent = newTotalPrice.toFixed(2);
+        }
     });
 });
 
