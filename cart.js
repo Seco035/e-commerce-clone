@@ -29,5 +29,4 @@ if(sepettekiUrunler&& sepettekiUrunler.length>0){
         `
     })
 
-
 }
