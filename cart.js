@@ -45,10 +45,33 @@ removeButtons.forEach((removeButton, index) => {
 
 
  // Butonları ve p etiketlerini seçin
-const plusButtons = document.querySelectorAll(".cartRow button:nth-child(1)");
-const minusButtons = document.querySelectorAll(".cartRow button:nth-child(3)");
-const quantityElements = document.querySelectorAll(".cartRow .tane");
-const productPriceElements = document.querySelectorAll(".cartRow .productPrice");
+const artıButton = document.querySelectorAll(".cartRow button:nth-child(1)");
+const eksiButton = document.querySelectorAll(".cartRow button:nth-child(3)");
+const quantity = document.querySelectorAll(".cartRow .tane");
+const productPrice = document.querySelectorAll(".cartRow .productPrice");
+
+// + butonu işlemleri
+artıButton.forEach((plusButton, index) => {
+    plusButton.addEventListener("click", () => {
+        // Mevcut miktarı alın
+        let currentQuantity = parseInt(quantity[index].textContent);
+    
+        // Miktarı artıButtonrın
+        currentQuantity++;
+    
+        // Yeni miktarı tane classlı div içine yazın
+        quantity[index].textContent = currentQuantity;
+    
+        // Ürün fiyatını alın
+        let currentProductPrice = parseFloat(sepettekiUrunler[index].price);
+    
+        // Yeni toplam fiyatı hesaplayın
+        let newTotalPrice = currentQuantity * currentProductPrice;
+    
+        // Yeni toplam fiyatı productPrice div'ine yazın
+        productPrice[index].textContent = newTotalPrice.toFixed(2);
+    });
+});
 
 // Sepetteki ürün adeti
 const cart = document.querySelector(".cart-box")
