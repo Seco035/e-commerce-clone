@@ -125,13 +125,6 @@ nav {
 
 
 @media (max-width: 768px) {
-
-    /* Ekran genişliği 768px'den küçükse buradaki stil uygulanır. */
-    /* Örneğin, metin boyutunu küçültebilir veya sıralamayı değiştirebilirsiniz. */
-    body {
-        min-width: 100%;
-    }
-
     .gri {
         display: none;
     }
@@ -184,29 +177,12 @@ nav {
     .container-78 {
         width: 100%;
     }
-    textarea{
+
+    textarea {
         width: 100%;
     }
-    .yanyana{
+
+    .yanyana {
         display: flex;
     }
-
-
-    /*
-    .menu {
-        text-align: center;
-    }
-
-    .menu ul {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        padding-top: 10px;
-    }
-
-    .carousel-inner img {
-        width: 100%;
-        height: auto;
-    } */
 }

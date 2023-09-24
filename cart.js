@@ -33,7 +33,7 @@ if (sepettekiUrunler && sepettekiUrunler.length > 0) {
     const removeButtons = document.querySelectorAll(".cartRow i");
 
     removeButtons.forEach((removeButton, index) => {
-        removeButton.addEventListener("click", () => {
+        removeButton.addEventListener("click", function () {
             cartRow.remove(cartRow.parentElement.parentElement);
 
             sepettekiUrunler.splice(index, 1);
@@ -50,7 +50,7 @@ if (sepettekiUrunler && sepettekiUrunler.length > 0) {
 
     // + butonu işlemleri
     artıButton.forEach((plusButton, index) => {
-        plusButton.addEventListener("click", () => {
+        plusButton.addEventListener("click", function () {
             let currentQuantity = parseInt(quantity[index].textContent);
 
             currentQuantity++;
@@ -67,7 +67,7 @@ if (sepettekiUrunler && sepettekiUrunler.length > 0) {
 
     // - butonu işlemleri
     eksiButton.forEach((minusButton, index) => {
-        minusButton.addEventListener("click", () => {
+        minusButton.addEventListener("click", function () {
             let currentQuantity = parseInt(quantity[index].textContent);
 
             if (currentQuantity > 1) {

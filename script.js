@@ -65,9 +65,10 @@ function ekle(e) {
             localStorage.setItem("cart", JSON.stringify(cartUrunleri));
 
             // Sepet sayısını güncelleyin.
-            const cart = document.querySelector(".cart-box")
-            cart.innerHTML++;
-
+            // const cart = document.querySelector(".cart-box")
+            // cart.innerHTML++;
+            const cartCount = document.querySelector(".cart-box");
+            cartCount.innerHTML = cartUrunleri.length;
         }
     }
 }
