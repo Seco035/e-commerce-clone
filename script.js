@@ -42,7 +42,7 @@ function ekle(e) {
         const productName = parentDiv.querySelector(".card-title").innerHTML;
 
         if (cartUrunleri.some(item => item.name == productName)) {
-            // Ürün sepette zaten varsa kullanıcıya bir uyarı verin.
+            // Kullanıcı aynı ürünü sepete eklerse alert verme
             const alert = document.querySelector(".alert")
             alert.classList.remove("d-none");
             alert.classList.add("d-block");
@@ -64,9 +64,7 @@ function ekle(e) {
 
             localStorage.setItem("cart", JSON.stringify(cartUrunleri));
 
-            // Sepet sayısını güncelleyin.
-            // const cart = document.querySelector(".cart-box")
-            // cart.innerHTML++;
+            // Sepetteki ürün sayısı
             const cartCount = document.querySelector(".cart-box");
             cartCount.innerHTML = cartUrunleri.length;
         }

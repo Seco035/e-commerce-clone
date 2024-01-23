@@ -42,7 +42,6 @@ if (sepettekiUrunler && sepettekiUrunler.length > 0) {
         });
     });
 
-    // Butonları ve p etiketlerini seçin
     const artıButton = document.querySelectorAll(".cartRow button:nth-child(1)");
     const eksiButton = document.querySelectorAll(".cartRow button:nth-child(3)");
     const quantity = document.querySelectorAll(".cartRow .tane");
